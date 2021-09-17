@@ -124,7 +124,8 @@ def plot_detections(first_data, table, marker='o', alpha=0.75):
       
         if min(data[mjd]) > 2400000.5: # means it's a jd column
             date = data[mjd] -  2400000.5
-            
+        else:
+            date = data[mjd]
         
         mjds, mags, errs = date, data[mag], data[err]
         for i in range(len(mjds)):
